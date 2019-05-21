@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1><%= @task.title %></h1>
+  <span class="btn-perso"><i class="far fa-edit"><%= link_to 'Edit Task', edit_path %></i></span>
+</div>
+
+<p class="details"><%= @task.details %></p>
+<% if @task.completed == true %>
+  <i class="far fa-check-circle" style="color: black"></i>
+  <span>this case is completed</span>
+<% else %>
+  <i class="far fa-circle"></i>
+  <span>this case is not completed yet</span>
+<% end %>
+
+<p class="link my-3"><i class="fas fa-arrow-left"> <%= link_to 'Back to list', tasks_path %></i></p>
